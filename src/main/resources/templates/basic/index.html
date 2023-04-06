@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>페이지모듈화</title>
+</head>
+<body>
+  <div th:replace="~{fragment/footer :: header}"></div>
+  <hr>
+  <div>내용</div>
+  <hr>
+  <!-- fragment를 div 안에 포함 -->
+  <div th:insert="~{fragment/footer :: copy}"></div>
+  
+  <!-- div를 fragment로 대체 -->
+  <div th:replace="~{fragment/footer :: copy}"></div>
+
+  <!-- 파라메터 전달 -->
+  <div th:replace="~{fragment/footer :: copyParam ('footer에 포함함 내용1', 'footer에 포함함 내용2')}"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+<!-- /* 템플릿페이지(layout2.html)에게 게시판 목록 관련 데이터 넘겨주는 역할*/ -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout/layout2 :: layout(~{::title}, ~{::link}, ~{::section})}">
+
+  <title>게시판 목록</title>
+  
+  <!-- 현재 페이지에 추가적인 css 파일 포함 -->
+  <link rel="stylesheet" th:href="@{/css/board1.css}">
+  <link rel="stylesheet" th:href="@{/css/board2.css}">
+
+  
+  <section>
+    <h2>게시판 목록 보여주기 화면</h2>
+    게시판 목록 관련 동적 컨텐츠들.....
+  </section>
+  
+
+</html>

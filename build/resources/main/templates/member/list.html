@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<h2>회원 목록</h2>
+<table border="1">
+	<tr><th>번호</th><th>아이디</th><th>이름</th><th>이메일</th><th>나이</th></tr>
+    <tr th:each="member, loopStat : ${members}">
+      <td th:text="${loopStat.count}">1</td>
+      <td>
+        <a href="hong@gmail.com" th:text="${member.memberId}"  th:href="@{/springmvc/members/{user-id}(user-id=${member.memberId})}">hong</a>
+      </td>
+      <td th:text="${member.name}">홍길동</td>
+      <td th:text="${member.email}">hong@gmail.com</td>
+      <td th:text="${member.age}">10</td>
+    </tr>
+</table>
+</body>
+</html>

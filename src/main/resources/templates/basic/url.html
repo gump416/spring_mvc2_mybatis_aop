@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+  <h1>URL 링크</h1>
+  <ul>
+    <li><a href="https://www.naver.com" th:href="@{/thymeleaf/hello}">단순 url</a></li>
+    <li><a th:href="@{/thymeleaf/hello}">단순 url</a></li>
+    <li><a th:href="@{/thymeleaf/hello(param1=${param1}, param2=${param2})}">query
+        param</a></li>
+    <li><a th:href="@{/thymeleaf/hello/{param1}/{param2}(param1=${param1}, param2=${param2})}">path
+        variable</a></li>
+    <li><a
+      th:href="@{/thymeleaf/hello/{param1}(param1=${param1}, param2=${param2})}">path
+        variable + query string</a></li>
+  </ul>
+</body>
+
+</html>
+
+
+
+
